@@ -1,5 +1,5 @@
 #### Preamble ####
-# Purpose: Simulates data on 
+# Purpose: Simulates data on political preference
 # Authors: Zheng(Zeb) Yang, Dongli Sun, Bernice(Yixuan) Bao
 # Contact: zhengzeb.yang@mail.utoronto.ca, dongli.sun@mail.utoronto.ca, bernice.bao@mail.utoronto.ca
 # Pre-requisites: -
