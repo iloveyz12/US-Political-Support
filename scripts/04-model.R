@@ -1,11 +1,8 @@
 #### Preamble ####
-# Purpose: Models... [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 11 February 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
-# License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Purpose: Models on analysis data
+# Authors: Zheng(Zeb) Yang, Dongli Sun, Bernice(Yixuan) Bao
+# Contact: zhengzeb.yang@mail.utoronto.ca, dongli.sun@mail.utoronto.ca, bernice.bao@mail.utoronto.ca
+# Pre-requisites: -
 
 
 #### Workspace setup ####
@@ -16,10 +13,10 @@ library(arrow)
 #### Read data ####
 analysis_data <- read_parquet("data/analysis_data/analysis_data.parquet")
 
-set.seed(853)
+set.seed(812)
 
 analysis_data <- 
-  ces2020 |> 
+  ces2022 |> 
   slice_sample(n = 1000)
 
 
@@ -31,7 +28,7 @@ first_model <-
     family = binomial(link = "logit"),
     prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
     prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
-    seed = 853
+    seed = 812
   )
 
 prior_summary(first_model)
