@@ -1,11 +1,8 @@
 ---
 title: "My title"
-subtitle: "My subtitle if needed"
-author: 
-  - First author
-  - Another author
+author: "Bernice(Yixuan) Bao, Zheng(Zeb) Yang, Dongli Sun"
 thanks: "Code and data are available at: LINK."
-date: today
+date: "March 11, 2024"
 date-format: long
 abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
 format: pdf
