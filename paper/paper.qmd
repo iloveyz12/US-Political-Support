@@ -170,7 +170,7 @@ modelsummary(
 
 ## Model set-up
 
-Define $y_i$ as the number of seconds that the plane remained aloft. Then $\beta_i$ is the wing width and $\gamma_i$ is the wing length, both measured in millimeters.  
+Define $y_i$ as the ... Then $\beta_i$ is the ... and $\gamma_i$ is the ...
 
 \begin{align} 
 y_i|\pi_i &\sim \mbox{Bern}(\pi_i) \\
@@ -185,7 +185,7 @@ We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use
 
 ### Model justification
 
-We expect a positive relationship between the size of the wings and time spent aloft. In particular...
+We expect a positive relationship between .... In particular...
 
 We can use maths by including latex between dollar signs, for instance $\theta$.
 
@@ -196,7 +196,7 @@ Our results are summarized in @fig-vote.
 
 ```{r}
 #| label: fig-vote
-#| fig-cap: ""
+#| fig-cap: "The distribution of presidential preferences, by gender, and highest education"
 #| echo: false
 #| eval: true
 #| warning: false
