@@ -61,4 +61,3 @@ ces2022 <-
 
 #### Save data ####
 write_parquet(ces2022, "data/analysis_data/analysis_data.parquet")
-write.csv(ces2022, "data/analysis_data/analysis_data1.csv")

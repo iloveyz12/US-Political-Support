@@ -9,17 +9,15 @@
 library(tidyverse)
 library(testthat)
 
-#### Test data ####
-ces2022 <-
-  read_csv(
-    here::here("data/analysis_data/analysis_data1.csv"))
+
+
 
 ces2022
 
 test_that("Check class", {
-  expect_type(ces2022$voted_for, "character")
+  expect_type(ces2022$voted_for, "integer")
   expect_type(ces2022$gender, "character")
-  expect_type(ces2022$education, "character")
+  expect_type(ces2022$education, "integer")
   
 })
 
