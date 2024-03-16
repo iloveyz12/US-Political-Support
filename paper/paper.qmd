@@ -143,12 +143,15 @@ saveRDS(
   political_preferences,
   file = "models/political_preference.rds"
 )
+
 ```
+
+
 
 
 ## Model set-up
 
-Define $y_i$ as the ... Then $\beta_i$ is the ... and $\gamma_i$ is the ...
+Define $y_i$ as the is the political preference of the respondent and equal to 1 if Biden and 0 if Trump. Then $\beta_i$ is the ... and $\gamma_i$ is the ...
 
 \begin{align} 
 y_i|\pi_i &\sim \mbox{Bern}(\pi_i) \\
@@ -178,7 +181,7 @@ Our results are summarized in @fig-vote.
 #| warning: false
 #| message: false
 political_preferences <-
-  readRDS(file = "models/political_preferences.rds")
+  readRDS(file = "models/political_preference.rds")
 ```
 
 ```{r}
