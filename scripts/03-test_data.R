@@ -1,5 +1,5 @@
 #### Preamble ####
-# Purpose: Tests on analysis data
+# Purpose: Tests on real analysis data
 # Authors: Zheng(Zeb) Yang, Dongli Sun, Bernice(Yixuan) Bao
 # Contact: zhengzeb.yang@mail.utoronto.ca, dongli.sun@mail.utoronto.ca, bernice.bao@mail.utoronto.ca
 # Pre-requisites: -
@@ -11,8 +11,9 @@ library(testthat)
 
 
 
-
+#run the real data
 ces2022
+
 
 test_that("Check class", {
   expect_type(ces2022$voted_for, "integer")

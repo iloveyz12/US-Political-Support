@@ -1,5 +1,5 @@
 #### Preamble ####
-# Purpose: Downloads and saves the data from [...UPDATE THIS...]
+# Purpose: Downloads and saves the data from Harvard Dataverse
 # Authors: Zheng(Zeb) Yang, , Bernice(Yixuan) Bao
 # Contact: zhengzeb.yang@mail.utoronto.ca, , bernice.bao@mail.utoronto.ca
 # Pre-requisites: -
@@ -9,7 +9,7 @@
 #### Workspace setup ####
 library(opendatatoronto)
 library(tidyverse)
-# [...UPDATE THIS...]
+
 
 #### Download data ####
 ces2022 <-
