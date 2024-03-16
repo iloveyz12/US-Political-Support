@@ -141,7 +141,7 @@ political_preferences <-
 
 saveRDS(
   political_preferences,
-  file = "models/political_preference.rds"
+  file = here::here("models/political_preference.rds")
 )
 
 ```
@@ -151,7 +151,7 @@ saveRDS(
 
 ## Model set-up
 
-Define $y_i$ as the is the political preference of the respondent and equal to 1 if Biden and 0 if Trump. Then $\beta_i$ is the ... and $\gamma_i$ is the ...
+Define $y_i$ as the is the political preference of the respondent and equal to 1 if Biden and 0 if Trump. Then $\text{gender}_i$ is the gender of the respondent and $\text{education}_i$ is the highest education of the respondent.
 
 \begin{align} 
 y_i|\pi_i &\sim \mbox{Bern}(\pi_i) \\
@@ -181,7 +181,7 @@ Our results are summarized in @fig-vote.
 #| warning: false
 #| message: false
 political_preferences <-
-  readRDS(file = "models/political_preference.rds")
+  readRDS(file = here::here("models/political_preference.rds"))
 ```
 
 ```{r}
