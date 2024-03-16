@@ -231,7 +231,7 @@ ces2022 |>
 
 ## Weaknesses and next steps
 
-Weaknesses and next steps should also be included.
+Weaknesses and next steps should also be included
 
 \newpage
 
