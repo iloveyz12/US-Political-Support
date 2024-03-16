@@ -144,29 +144,6 @@ saveRDS(
 )
 ```
 
-```{r}
-#| echo: false
-#| warning: false
-#| message: false
-political_preferences <-
-  readRDS(file = "political_preferences.rds")
-```
-
-```{r}
-#| label: tbl-vote
-#| tbl-cap: "Whether a respondent is likely to vote for Biden based on their gender and education"
-#| echo: false
-#| warning: false
-#| message: false
-modelsummary(
-  list(
-    "Support Biden" = political_preferences
-  ),
-  statistic = "mad"
-  )
-```
-
-
 
 ## Model set-up
 
@@ -193,6 +170,30 @@ We can use maths by including latex between dollar signs, for instance $\theta$.
 # Results
 
 Our results are summarized in @fig-vote.
+
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+political_preferences <-
+  readRDS(file = "political_preferences.rds")
+```
+
+```{r}
+#| label: tbl-vote
+#| tbl-cap: "Whether a respondent is likely to vote for Biden based on their gender and education"
+#| echo: false
+#| warning: false
+#| message: false
+modelsummary(
+  list(
+    "Support Biden" = political_preferences
+  ),
+  statistic = "mad"
+  )
+```
+
 
 ```{r}
 #| label: fig-vote
