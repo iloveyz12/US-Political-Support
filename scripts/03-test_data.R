@@ -12,7 +12,7 @@ library(testthat)
 
 
 #run the real data
-ces2022
+read.csv("data/analysis_data/analysis_data.csv")
 
 
 test_that("Check class", {
