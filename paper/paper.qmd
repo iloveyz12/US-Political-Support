@@ -29,6 +29,7 @@ library(modelsummary)
 library(rstanarm)
 library(tidybayes)
 library(tidyverse)
+library(arrow)
 ```
 
 
@@ -135,12 +136,12 @@ political_preferences <-
     prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
     prior_intercept = 
       normal(location = 0, scale = 2.5, autoscale = TRUE),
-    seed = 853
+    seed = 812
   )
 
 saveRDS(
   political_preferences,
-  file = "political_preferences.rds"
+  file = "models/political_preference.rds"
 )
 ```
 
@@ -177,7 +178,7 @@ Our results are summarized in @fig-vote.
 #| warning: false
 #| message: false
 political_preferences <-
-  readRDS(file = "political_preferences.rds")
+  readRDS(file = "models/political_preferences.rds")
 ```
 
 ```{r}
