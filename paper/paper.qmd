@@ -213,7 +213,7 @@ ces2022 |>
     fill = "Voted for"
   ) +
   coord_flip() +
-  scale_fill_brewer(palette = "Set1") +
+  scale_fill_manual(values = c("Trump" = "red", "Biden" = "blue")) +
   theme(legend.position = "bottom")
 ```
 
