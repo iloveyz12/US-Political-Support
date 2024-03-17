@@ -1,10 +1,10 @@
 ---
-title: "My title"
+title: "Understanding Voter Preferences: A Gender and Education Analysis of the 2022 United States Election"
 author: "Bernice(Yixuan) Bao, Zheng(Zeb) Yang, Dongli Sun"
 thanks: "Code and data are available at: <https://github.com/iloveyz12/US-Political-Support>."
 date: "March 11, 2024"
 date-format: long
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+abstract: "This paper investigates and studies the voter turnout of the 2022 the United Status election, and uses the CES research to sample the data and analyze the different groups. We used Bernoulli distribution to explore whether the gender and education of voters have an impact on candidates. We noticed that the analysis found that the majority of the group voted for Biden compared to Trump. Regardless of the level of education and gender differences, Biden's votes basically beat Trump's. Then, we’re going to take a closer study in this phenomenon and we're going to explore why the majority of voters chose Biden. We need the outcome to determine whether they will affect future elections and adjust them."
 format: pdf
 number-sections: true
 bibliography: references.bib
@@ -16,7 +16,6 @@ bibliography: references.bib
 #| message: false
 
 library(tidyverse)
-library(palmerpenguins)
 library(boot)
 library(broom.mixed)
 library(collapse)
@@ -28,18 +27,16 @@ library(marginaleffects)
 library(modelsummary)
 library(rstanarm)
 library(tidybayes)
-library(tidyverse)
 library(arrow)
 ```
 
 
 # Introduction
+The purpose of CES is to investigate how Americans vote during elections in the United States and about voters' how they vote and their experiences during elections whether change according to political geography and social context. This study has an enormous sample to refer to, but we only need to start the calculation and evaluation on a state-by-state basis, so that we can do a better and more accurately understand on changes in the data. We will select some of these variables for in-depth analysis and optimization based on the articles by @ces2022, Brian and Ansolabehere, Stephen and Shih, Marissa. 
 
-You can and should cross-reference sections and sub-sections. We use @citeR and @rohan.
+During 2022, CES surveyed about 60 teams, producing a generic content sample of 60,000 cases. In the fall of 2022, the subjects for this study were recruited to do the test. There were two interviews for this year's survey, and each research team bought a national sample of 1,000 people, which was conducted at YouGov in Redwood City, California. The paper will also analyze the sample of 1,000 people. CES used the data by taking samples and matching the data a second time. Finally, the survey results provide enough sample variables and the final data displayed, which can be re-entered into data cleaning and combined with other data to draw new conclusions. This paper is to select a few of the variables given and apply new filters and combinations to demonstrate whether the data generation is accurate.
 
-The remainder of this paper is structured as follows. @sec-data....
-
-We use the dataset from 2022 Cooperative Election Study @ces2022. To further enable the analysis I employed the use of the package of ggplot[@ggplot2] to generate histograms.
+We use R[@citeR] and the dataset from 2022 Cooperative Election Study @ces2022. To further enable the analysis I employed the use of the following packages: dataverse[@dataverse], ggplot[@ggplot2], tidyverse[@tidyverse], arrow[@arrow], rstanarm[@rstanarm], modelsummary[@modelsummary] and here[@here].
 
 # Data {#sec-data}
 
@@ -95,19 +92,26 @@ ces2022 <-
 ```
 
 
+## Data Source and variable
+The data we used came from The 2022 Cooperative Election Study (CES) and because the database was too large and conducted on the web, with a total of 60,000 people participating in the campaign, YouGov used a matching random sample survey and sample to match these adult U.S. citizens and categorized these groups as gender, race and age. We mainly use two variables, gender and education, to analyze as Biden and Trump vote rating.
+
+When we use dataset @dataverse data, the data shows that several variables about "votereg", "presvote20post", "gender" and "edu" represent the voter, the voting status for 20 years, the gender of the voter, and the education level of the voter. First of all, we will use @tidyverse for the simulate data part, and we get that there are 5 parts of the education level, from education level below high school to post-grad. At the same time, the data shows that there are four groups of genders, namely men, women, non-binary and other. In data cleaning, we're putting presidential candidates in the middle to show their respective approval ratings, and we're going to @tidyverse and @arrow Use "presvote0post" to filter, if "presvote0post" ==1, it will show Biden's approval rating, otherwise it will be Trump. This time, the data combines the voters' choice as well as their gender and education level, which are one of the factors.
 
 
+We know from the data that 4,000 more women voted than men. Compare with man, women voters are more likely to vote for Biden, regardless of their educational stage. Men generally have higher approval ratings for Biden than Trump, except for men at the high school graduate level. Non-binary support for Biden almost crushed trump's votes, with the smallest number of people in the other group, with half and half turnout for Biden and Trump.
+
+## Data methodology
+
+The 2022 United States Election Voter Survey is to select a representative sample within a sample group to conduct feedback and conduct in-depth surveys in order to ensure the generation of real data. In this way, when used for large-scale events such as elections in the United States, the fund of the web can greatly reduce the cost of expenses and the asymmetry of information generated by individuals.
+Digging deeper into the data, a matching method can be used for sample selectivity. The YouGov sample selection method is divided into two phases. First, they randomly selected a representative target sample from the target population. A matching sample is similar for the random sample and they will match it when the data can be matched. The matching process uses several variables to ensure that the matched sample is similar in measurement characteristics to the target sample. For example, gender will be divided into 4 different groups to vote within the group, in order to understand the choice by different genders people who chosen Biden. Further, we can combine the people of different genders with their educational backgrounds to analyze whether there are differences in the turnout rate of people in the same group due to different levels of education in different educational backgrounds.
 
 
-Talk more about it.
+## Weighting
+The target sample does not fit the demographics perfectly, and any remaining imbalances in the sample need to be weighted. Therefore, after the CES weighted the sample, the politically charged citizens were balanced in the distribution of multiple voter turnouts such as gender and education. Weighting is performed for samples in two parts. First, the 2020 presidential ballot was weighted by iterative proportional fitting ("skew") of joint distribution, and different states were selected as representative samples, so that the full cases could be weighted into the sampling framework using entropy balance. Then voters and other conditions were in a state of equilibrium, and the content of common content was cut out to reduce the proportion of data. In the second phase, CES used a matching method to conduct new weighting in 2022, which will ensure the diversity of the sample and understand the voting choices of different voters.
 
-
-
-
-
-Talk way more about it. 
-
-
+## Vote Validation
+In order to ensure that the data matches the TargetSmart, the lost of some data may not be matched. First, we download the file from dataverse @dataverse to get the raw data, then we assign the sample, record the missing data, and test it. "TS_voterstatus" represents whether the voter is active or not. Then to "TS_g2022" about the status of whether voters vote or not, in 2022, CES recorded about 49% of people voting in the primary choice and 81% voting in the general election. He showed that if any non-missing value is less than 7, then the election has a verified voting record, which is possible to be matched. We mainly use "CC22_401" to verify turnout, so that we can do the next step of matching and filter out data loss. If we want to verify the turnout of the CES, we can use three methods: variables and self-reported turnout - “TS_g2022" and whether it has been registered. To collect the primary election whether it is online or not, and then enter the system and survey and then determine whether they will participate in the general election for the second round, and how to participate in the selection method can also become a direction of analysis, because the data is too large, as mentioned above, it may be that the web will conduct the main voting method, but it is not excluded that other ways can also participate in the vote. Multivariate samples can lead to more data matching.
+Combined with the two main elements we used above about gender and education, we can end up with a complete and accurate output of data.
 
 # Model
 
