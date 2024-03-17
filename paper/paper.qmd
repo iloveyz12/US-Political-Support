@@ -111,8 +111,6 @@ Talk way more about it.
 
 # Model
 
-The goal of our modelling strategy is twofold. Firstly,
-
 
 ```{r}
 #| echo: false
