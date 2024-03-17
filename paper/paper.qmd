@@ -149,8 +149,7 @@ saveRDS(
 
 ## Model set-up
 
-Define $y_i$ as the is the political preference of the respondent and equal to 1 if Biden and 0 if Trump. Then $\text{gender}_i$ is the gender of the respondent and $\text{education}_i$ is the highest education of the respondent.
-$\beta_1$ and $\beta_2$ represent the coefficients associated with the predictor variables (gender and education level of respondent, respectively).
+Define $y_i$ as the is the political preference of the respondent and equal to 1 if Biden and 0 if Trump. Then $\text{gender}_i$ is the gender of the respondent and $\text{education}_i$ is the highest education of the respondent. $\alpha$ represents the intercept term, which is the log-odds of the outcome variable when all predictor variables are equal to zero. $\beta_1$ and $\beta_2$ represent the coefficients associated with the predictor variables (gender and education level of respondent, respectively).
 We could estimate the parameters using `stan_glm()`. Note that the model is a generally accepted short-hand. In practice `rstanarm` converts categorical variables into a series of indicator variables and there are multiple coefficients estimated. In the interest of run-time we will randomly sample 1,000 observations and fit the model on that, rather than the full dataset.
 
 \begin{align} 
