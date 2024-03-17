@@ -111,8 +111,6 @@ Talk way more about it.
 
 # Model
 
-The goal of our modelling strategy is twofold. Firstly,
-
 
 ```{r}
 #| echo: false
@@ -168,6 +166,7 @@ We run the model in R [@citeR] using the `rstanarm` package of @rstanarm, `model
 
 We expect a positive relationship between .... In particular...
 
+Binomial logistic regression is a statistical method used to model the probability of a binary outcome variable. It's particularly suitable for situations where the dependent variable has two categories, such as in this study where we examine the likelihood of respondents voting for either Biden or Trump based on their gender and education level. The decision to employ binomial logistic regression for our study stems from its suitability for modeling binary outcome variables. As the outcome variable pertains to respondents' voting behavior, which involves choosing between Biden or Trump, binomial logistic regression is well-suited to capture this dichotomous outcome.
 
 
 
