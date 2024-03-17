@@ -239,7 +239,7 @@ ces2022 |>
 
 ## First discussion point: What does this paper do?
 
-This paper delves into the voter turnout of the 2022 United States election, employing CES research to sample and analyze data across different demographic groups (@campbell1954voter). Utilizing the Bernoulli distribution, the study investigates whether the gender and education of voters impact their candidate preferences. The analysis reveals a consistent trend: regardless of gender or education level, the majority of voters cast their ballots for Biden over Trump (@bartels2008unequal). Recognizing this phenomenon, the paper aims to conduct a deeper exploration into why Biden garnered widespread support and its potential implications for future elections (@ansolabehere1995goin).
+This paper delves into the voter turnout of the 2022 United States election, employing CES research to sample and analyze data across different demographic groups (@campbell1954voter). Utilizing the Bernoulli distribution, the study investigates whether the gender and education of voters impact their candidate preferences. The analysis reveals a consistent trend: regardless of gender or education level, the majority of voters cast their ballots for Biden over Trump (@bartels2008unequal). Recognizing this phenomenon, the paper aims to conduct a deeper exploration into why Biden garnered widespread support and its potential implications for future elections (@ansolabehere1995going).
 
 ## Second discussion point: What have we learned from the world?
 
@@ -247,26 +247,15 @@ From existing literature and global observations, we've gathered insights into t
 
 ## Third discussion point: What's another thing we've learned from the world?
 
-Another crucial insight gleaned from global observations is the importance of candidate appeal and campaign strategies in influencing voter preferences (@ansolabehere1995goin).     Effective communication strategies, including resonant messaging and clear articulation of policy proposals, play a pivotal role in swaying undecided voters and mobilizing support from diverse demographic groups (@holbrook1996do).     Furthermore, the role of media, social networks, and societal discourse cannot be underestimated in shaping public opinion and electoral outcomes (@bartels2008unequal). The intricate interplay between these factors, alongside demographic variables such as gender and education, offers a comprehensive understanding of the multifaceted dynamics that drive voter behavior.       By delving into these nuanced interactions, researchers can glean invaluable insights into the complex mechanisms that underpin electoral decision-making processes, thus enriching our understanding of political phenomena and informing strategic approaches to future elections.
+Another crucial insight gleaned from global observations is the importance of candidate appeal and campaign strategies in influencing voter preferences (@ansolabehere1995going).     Effective communication strategies, including resonant messaging and clear articulation of policy proposals, play a pivotal role in swaying undecided voters and mobilizing support from diverse demographic groups (@holbrook1996do).     Furthermore, the role of media, social networks, and societal discourse cannot be underestimated in shaping public opinion and electoral outcomes (@bartels2008unequal). The intricate interplay between these factors, alongside demographic variables such as gender and education, offers a comprehensive understanding of the multifaceted dynamics that drive voter behavior.       By delving into these nuanced interactions, researchers can glean invaluable insights into the complex mechanisms that underpin electoral decision-making processes, thus enriching our understanding of political phenomena and informing strategic approaches to future elections.
 
 ## Weaknesses and next steps
 
-Despite its contributions, this paper has several limitations that warrant acknowledgment (@ansolabehere1995goin). Firstly, while the analysis identifies correlations between gender, education, and candidate preference, it may overlook other influential factors such as race, age, and geographic location (@campbell1954voter). Additionally, the reliance on CES research for sampling may introduce biases that affect the generalizability of the findings (@bartels2008unequal). Moreover, the study lacks qualitative insights into voters' motivations and decision-making processes, which could provide richer context for interpreting the results (@holbrook1996do).
+Despite its contributions, this paper has several limitations that warrant acknowledgment (@ansolabehere1995going). Firstly, while the analysis identifies correlations between gender, education, and candidate preference, it may overlook other influential factors such as race, age, and geographic location (@campbell1954voter). Additionally, the reliance on CES research for sampling may introduce biases that affect the generalizability of the findings (@bartels2008unequal). Moreover, the study lacks qualitative insights into voters' motivations and decision-making processes, which could provide richer context for interpreting the results (@holbrook1996do).
 
 
-Moving forward, further research is needed to deepen our understanding of the factors driving voter behavior and electoral outcomes (@bartels2008unequal). Future studies should employ more diverse sampling methods and incorporate qualitative methodologies to capture the nuances of voter preferences (@ansolabehere1995goin). Additionally, exploring the intersectionality of demographic variables and considering evolving societal trends will enhance the comprehensiveness of analyses (@campbell1954voter). Moreover, longitudinal studies tracking voter preferences over time can provide valuable insights into the evolving political landscape and inform strategic adjustments for future campaigns (@holbrook1996do). By addressing these areas, researchers can advance our understanding of electoral dynamics and contribute to more informed policymaking and political strategies.
+Moving forward, further research is needed to deepen our understanding of the factors driving voter behavior and electoral outcomes (@bartels2008unequal). Future studies should employ more diverse sampling methods and incorporate qualitative methodologies to capture the nuances of voter preferences (@ansolabehere1995going). Additionally, exploring the intersectionality of demographic variables and considering evolving societal trends will enhance the comprehensiveness of analyses (@campbell1954voter). Moreover, longitudinal studies tracking voter preferences over time can provide valuable insights into the evolving political landscape and inform strategic adjustments for future campaigns (@holbrook1996do). By addressing these areas, researchers can advance our understanding of electoral dynamics and contribute to more informed policymaking and political strategies.
 
-
-\newpage
-
-\appendix
-
-# Appendix {-}
-
-
-# Additional data details
-
-# Model details {#sec-model-details}
 
 
 
