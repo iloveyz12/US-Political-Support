@@ -149,22 +149,23 @@ saveRDS(
 
 ## Model set-up
 
-Define $y_i$ as the is the political preference of the respondent and equal to 1 if Biden and 0 if Trump. Then $\text{gender}_i$ is the gender of the respondent and $\text{education}_i$ is the highest education of the respondent.We could estimate the parameters using `stan_glm()`. Note that the model is a generally accepted short-hand. In practice `rstanarm` converts categorical variables into a series of indicator variables and there are multiple coefficients estimated. In the interest of run-time we will randomly sample 1,000 observations and fit the model on that, rather than the full dataset.
+Define $y_i$ as the is the political preference of the respondent and equal to 1 if Biden and 0 if Trump. Then $\text{gender}_i$ is the gender of the respondent and $\text{education}_i$ is the highest education of the respondent.
+$\beta_1$ and $\beta_2$ represent the coefficients associated with the predictor variables (gender and education level of respondent, respectively).
+We could estimate the parameters using `stan_glm()`. Note that the model is a generally accepted short-hand. In practice `rstanarm` converts categorical variables into a series of indicator variables and there are multiple coefficients estimated. In the interest of run-time we will randomly sample 1,000 observations and fit the model on that, rather than the full dataset.
 
 \begin{align} 
 y_i|\pi_i &\sim \mbox{Bern}(\pi_i) \\
 \mbox{logit}(\pi_i) &= \alpha + \beta_1 \times \mbox{gender}_i + \beta_2 \times \mbox{education}_i\\
 \alpha &\sim \mbox{Normal}(0, 2.5) \\
-\beta_1 &\sim \mbox{Normal}(0, 5.02) \\
-\beta_2 &\sim \mbox{Normal}(0, 6.34)
+\beta_1 &\sim \mbox{Normal}(0, 2.5) \\
+\beta_2 &\sim \mbox{Normal}(0, 2.5)
 \end{align}
 
+In our model, these prior distributions are assumed to be normal distributions with mean 0 and standard deviation 2.5, where the prior distributions capture uncertainty about their values before observing the data.
 We run the model in R [@citeR] using the `rstanarm` package of @rstanarm, `modelsummary` package of @modelsummary and `here` package of @here. We use the default priors from `rstanarm`.
 
 
 ### Model justification
-
-We expect a positive relationship between .... In particular...
 
 Binomial logistic regression is a statistical method used to model the probability of a binary outcome variable. It's particularly suitable for situations where the dependent variable has two categories, such as in this study where we examine the likelihood of respondents voting for either Biden or Trump based on their gender and education level. The decision to employ binomial logistic regression for our study stems from its suitability for modeling binary outcome variables. As the outcome variable pertains to respondents' voting behavior, which involves choosing between Biden or Trump, binomial logistic regression is well-suited to capture this dichotomous outcome.
 
