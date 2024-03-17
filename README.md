@@ -1,10 +1,11 @@
-# Starter folder
+# US-Political-Support
 
 ## Overview
 
-This repo provides students with a foundation for their own projects associated with *Telling Stories with Data*. You do not need every aspect for every paper and you should delete aspects that you do not need.
+This paper investigates and studies the voter turnout of the 2022 the United Status election, and uses the CES research to sample the data and analyze the different groups. We need the outcome to determine whether they will affect future elections and adjust them.
 
-To use this folder, click the green "Code" button", then "Download ZIP". Move the downloaded folder to where you want to work on your own computer, and then modify it to suit.
+Code and data are available at: <https://github.com/iloveyz12/US-Political-Support>.
+
 
 
 ## File Structure
