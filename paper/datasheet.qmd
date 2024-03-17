@@ -1,12 +1,8 @@
 ---
 title: "Datasheet for 'A dataset'"
-subtitle: "My subtitle if needed"
-author: 
-  - First author
-  - Another author
-thanks: "Code and data are available at: LINK."
-date: "`r Sys.time()`"
-date-format: "D MMMM YYYY"
+author: "Bernice(Yixuan) Bao, Zheng(Zeb) Yang, Dongli Sun"
+thanks: "Code and data are available at: <https://github.com/iloveyz12/US-Political-Support>."
+date: "March 11, 2024"
 abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
 format: pdf
 number-sections: true
